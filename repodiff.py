@@ -389,7 +389,7 @@ def preview_prompt(prompt_text: str) -> None:
 def main():
     console.print(
         Panel.fit(
-            "[bold green]GitPrompt[/bold green] - Generate code review prompts from Git changes",
+            "[bold green]RepoDiff[/bold green] - Generate code review prompts from Git changes",
             box=box.ROUNDED,
             border_style="bright_blue",
         )
