@@ -321,6 +321,8 @@ def format_prompt(selected_files: List[str],
     # Add README if it exists.
     readme_content = get_readme_content()
     if readme_content:
+        do_readme = Confirm.ask("Include repository's README?", default=False)
+    if do_readme:
         parts.append("# Repository's README:\n```")
         parts.append(readme_content)
         parts.append("\n```---\n")
@@ -448,13 +450,7 @@ def main():
         console.print("[bold yellow]No files selected. Exiting.[/bold yellow]")
         sys.exit(0)
     
-    with Progress(
-        SpinnerColumn(),
-        TextColumn("[bold blue]Generating prompt..."),
-        transient=True,
-    ) as progress:
-        progress.add_task("generate", total=None)
-        prompt_text = format_prompt(selected_files, renamed_files, binary_files)
+    prompt_text = format_prompt(selected_files, renamed_files, binary_files)
     
     console.print("[bold green]Prompt Generated![/bold green]")
     
