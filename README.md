@@ -1,6 +1,10 @@
-# repodiff
+# RepoDiff
 
-A Python CLI tool to generate comprehensive prompts from staged and unstaged Git changes, suitable for code reviews or feeding into Large Language Models (LLMs).
+**RepoDiff** is a Python CLI tool that generates clean, formatted prompts from Git changes, perfect for AI code reviews. It interactively selects changed files, shows interleaved diffs (`+`/`-`), and includes READMEs—ready for clipboard or direct sharing.  
+
+*Made for AI pair-programming!* 🚀
+
+<img width="614" alt="image" src="https://github.com/user-attachments/assets/af205cfc-6318-4fa2-ab9e-b0fd1190a24e" />
 
 It interactively lists changed files, allows selection, and generates a formatted output including an interleaved diff view, the repository README, and path change information, ready to be copied to the clipboard.
 
