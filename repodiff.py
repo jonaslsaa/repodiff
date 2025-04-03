@@ -358,12 +358,12 @@ def format_prompt(selected_files: List[str], renamed_files: Set[str],
     # Add README if exists
     readme_content = get_readme_content()
     if readme_content:
-        parts.append("# Repository README\n")
+        parts.append("# Repository's README:\n```")
         parts.append(readme_content)
-        parts.append("\n---\n")
+        parts.append("\n```---\n")
     
     # Add selected files
-    parts.append("# Changed Files\n")
+    parts.append("# Changed Files:\n")
     
     for file_path in selected_files:
         # Skip binary files
