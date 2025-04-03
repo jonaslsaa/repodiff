@@ -77,7 +77,7 @@ def get_changed_files() -> Tuple[List[str], Set[str], Set[str], Set[str]]:
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         encoding="utf-8",
-    ).stdout.strip().split("\n")
+    ).stdout.split("\n")
     
     if status_output == [""]:
         return [], set(), set(), set()
