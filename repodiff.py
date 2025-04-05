@@ -314,6 +314,7 @@ def format_prompt(selected_files: List[str],
 *   Lines starting with `-` have been removed.
 *   Lines starting with a space ` ` are unchanged context.
 
+Consider all changes carefully.
 ---
 """
     parts = [explanation_snippet] # Start the parts list with the snippet
