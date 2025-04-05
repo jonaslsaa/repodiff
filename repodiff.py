@@ -323,9 +323,9 @@ def format_prompt(selected_files: List[str],
     if readme_content:
         do_readme = Confirm.ask("Include repository's README?", default=False)
     if do_readme:
-        parts.append("# Repository's README:\n```")
+        parts.append("# Repository's README:\n```\n")
         parts.append(readme_content)
-        parts.append("\n```---\n")
+        parts.append("\n```\n---\n")
     
     parts.append("# Changed Files:\n")
     deleted_files = []
